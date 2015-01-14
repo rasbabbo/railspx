@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  get 'catagories/index'
+
+  get 'catagories/show'
+
+  get 'catagories/new'
+
+  get 'catagories/edit'
+
+  get 'catagories/delete'
+
   get 'pages/home'
 
   get 'pages/erb_demo'
