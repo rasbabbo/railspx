@@ -13,4 +13,11 @@ class CategoriesController < ApplicationController
 
   def delete
   end
+
+  private
+
+  def category_params
+    params.require(:category).permit(:name, :thumburl)
+  end
+  
 end
