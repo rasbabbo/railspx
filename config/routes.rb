@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get '/' => "pages#home"
+
+  resources :categories
+    get 'categories/:id/delete' =>
+  'categories#delete', :as => :categories_delete
+  
   get 'categories/index'
 
   get 'categories/show'
@@ -9,16 +15,6 @@ Rails.application.routes.draw do
   get 'categories/edit'
 
   get 'categories/delete'
-
-  get 'catagories/index'
-
-  get 'catagories/show'
-
-  get 'catagories/new'
-
-  get 'catagories/edit'
-
-  get 'catagories/delete'
 
   get 'pages/home'
 

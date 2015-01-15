@@ -1,2 +1,31 @@
 <h1>Categories#index</h1>
 <p>Find me in app/views/categories/index.html.erb</p>
+
+
+<h1>LIsting Cats</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Thumburl</th>
+			<th colspan="3"></th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<%  %>
+			<tr>
+				<td><%= %></td>
+				<td><%= %></td>
+				<td><%= link_to 'Show', category_path(category) %></td>
+				<td><%= link_to 'Edit', category_path(category) %></td>
+				<td><%= link_to 'Destroy', category, method: :delete, data: { confirm: "Positive?"} %></td>
+			</tr>
+		<% #end loop %>
+	</tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Category', new_category_path %>
